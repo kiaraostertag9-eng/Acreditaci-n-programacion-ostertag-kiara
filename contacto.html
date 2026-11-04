@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | ALSÛR</title>
+  <link rel="stylesheet" href="diseño.css">
+</head>
+<footer class="pie">
+  <p>© ALSÛR · Solución segura desde el sur para vos</p>
+  <a href="login.html">Acceso administrador</a>
+</footer>
+<body class="fondo-contacto">
+  <header class="menu">
+    <a class="marca" href="index.html">
+      <img src="img/LOGO NUEVO.png" alt="Logo de ALSÛR" class="logo"> ALSÛR
+    </a>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <main class="pagina">
+    <h1 class="titulo-pagina">Contacto</h1>
+    <p class="subtitulo">Escribinos y te respondemos a la brevedad.</p>
+
+    <form id="formConsulta" class="formulario">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="gmail">Email:</label>
+      <input type="email" id="gmail" name="gmail" required>
+
+      <label for="telefono">Teléfono (opcional):</label>
+      <input type="text" id="telefono" name="telefono">
+
+      <label for="id_servicio">Servicio de interés:</label>
+      <select id="id_servicio" name="id_servicio">
+        <option value="">Consulta general</option>
+      </select>
+
+      <label for="asunto">Asunto:</label>
+      <input type="text" id="asunto" name="asunto" required>
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" rows="5" minlength="10" required></textarea>
+
+      <button type="submit" class="boton boton-enviar">Enviar</button>
+    </form>
+  </main>
+
+  <script src="contacto.js"></script>
+</body>
+</html>

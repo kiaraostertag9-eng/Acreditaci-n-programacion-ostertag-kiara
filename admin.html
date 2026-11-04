@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel | ALSÛR</title>
+  <link rel="stylesheet" href="diseño.css">
+</head>
+<body class="fondo-contacto">
+  <header class="menu">
+    <a class="marca" href="index.html">
+      <img src="img/LOGO NUEVO.png" alt="Logo de ALSÛR" class="logo"> ALSÛR
+    </a>
+    <button id="btnCerrarSesion">Cerrar sesión</button>
+  </header>
+
+  <main class="pagina">
+    <h1 class="titulo-pagina">Panel de administración</h1>
+
+    <h2 class="titulo-seccion">Filtros</h2>
+    <div class="filtros">
+      <select id="filtro-estado">
+        <option value="">Todas</option>
+        <option value="0">No leídas</option>
+        <option value="1">Leídas</option>
+      </select>
+      <input type="date" id="filtro-fecha">
+      <input type="text" id="filtro-buscar" placeholder="Buscar por nombre o email">
+      <button id="btn-filtrar">Filtrar</button>
+    </div>
+
+    <div style="overflow-x: auto;">
+      <table class="tabla">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Asunto</th>
+            <th>Fecha</th>
+            <th>Estado</th>
+            <th>Acción</th>
+          </tr>
+        </thead>
+        <tbody id="cuerpo-tabla"></tbody>
+      </table>
+    </div>
+
+    <div id="panel-detalle" style="display: none;">
+      <h2>Detalle de la consulta</h2>
+      <p><strong>De:</strong> <span id="detalle-nombre"></span> (<span id="detalle-gmail"></span>)</p>
+      <p><strong>Teléfono:</strong> <span id="detalle-telefono"></span></p>
+      <p><strong>Asunto:</strong> <span id="detalle-asunto"></span></p>
+      <p><strong>Mensaje:</strong></p>
+      <p id="detalle-mensaje"></p>
+      <button id="btn-leida"></button>
+      <button id="btn-cerrar-detalle">Cerrar detalle</button>
+    </div>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>
